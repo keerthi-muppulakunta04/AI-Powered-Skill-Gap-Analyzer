@@ -25,10 +25,10 @@ By leveraging AI-based embeddings, it computes semantic similarity between skill
 
 ✅ **Interactive Visualizations**
 
-📊 Processing Summary Dashboard: Total Documents, Success Rate, and Failures.
-📈 Skill Gap Pie Chart: Matched vs Missing skills ratio.
-🎯 Category Radar Chart: Visual representation of coverage by domain.
-🔥 Similarity Heatmap: AI-based similarity scores between all skills.
+- 📊 Processing Summary Dashboard: Total Documents, Success Rate, and Failures.
+- 📈 Skill Gap Pie Chart: Matched vs Missing skills ratio.
+- 🎯 Category Radar Chart: Visual representation of coverage by domain.
+- 🔥 Similarity Heatmap: AI-based similarity scores between all skills.
 
 ✅****Personalized Learning Path****
 • Recommends missing skills with priority, difficulty level, and estimated learning time.
@@ -50,12 +50,12 @@ By leveraging AI-based embeddings, it computes semantic similarity between skill
 🎬 **Outputs**
 
 Below are sample output visuals :
-📤** **Document Upload Interface**** – Upload resumes and job descriptions side by side.
-📊 **Processing Results Dashboard** – Displays total, success, and failure counts.
-🧾 ****Skill Extraction Buttons** **– Clean, button-style view of extracted skills.
-🎯 **Gap Analysis** – Clear distinction of matched, partial, and missing skills.
-📈 **Radar & Heatmap Visuals** – Compare category-wise and skill-level similarity.
-🎓 **Personalized Learning Path** – Smart recommendations with duration & resources.
+- 📤** **Document Upload Interface**** – Upload resumes and job descriptions side by side.
+- 📊 **Processing Results Dashboard** – Displays total, success, and failure counts.
+- 🧾 ****Skill Extraction Buttons** **– Clean, button-style view of extracted skills.
+- 🎯 **Gap Analysis** – Clear distinction of matched, partial, and missing skills.
+- 📈 **Radar & Heatmap Visuals** – Compare category-wise and skill-level similarity.
+- 🎓 **Personalized Learning Path** – Smart recommendations with duration & resources.
 
 🏁 **Conclusion**
 
