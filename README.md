@@ -1,4 +1,4 @@
-🌟** **AI Powered Skill Gap Analyzer**** 🌟
+🌟 **AI Powered Skill Gap Analyzer** 🌟
 
 👩‍💻 Developed by: Muppulakunta Keerthi| ID: 17
 
@@ -15,7 +15,7 @@ By leveraging AI-based embeddings, it computes semantic similarity between skill
 • Automatically extracts clean text and removes unnecessary formatting or headers.
 • Supports OCR for scanned documents.
 
-✅** **AI-based Skill Extraction****
+✅ **AI-based Skill Extraction**
 • Uses spaCy and Sentence-BERT models to identify technical and soft skills.
 • Performs keyword and fuzzy matching for accurate skill detection.
 
@@ -50,9 +50,9 @@ By leveraging AI-based embeddings, it computes semantic similarity between skill
 🎬 **Outputs**
 
 Below are sample output visuals :
-- 📤** **Document Upload Interface**** – Upload resumes and job descriptions side by side.
+- 📤 **Document Upload Interface** – Upload resumes and job descriptions side by side.
 - 📊 **Processing Results Dashboard** – Displays total, success, and failure counts.
-- 🧾 ****Skill Extraction Buttons** **– Clean, button-style view of extracted skills.
+- 🧾 **Skill Extraction Buttons** – Clean, button-style view of extracted skills.
 - 🎯 **Gap Analysis** – Clear distinction of matched, partial, and missing skills.
 - 📈 **Radar & Heatmap Visuals** – Compare category-wise and skill-level similarity.
 - 🎓 **Personalized Learning Path** – Smart recommendations with duration & resources.
