@@ -2,6 +2,7 @@
 # 🌟 AI Powered Skill Gap Analyzer for Resume and Job Description Matching 🌟
 # Student Name: Keerthi Muppulakunta
 # Student ID: 17
+
 import os
 import re
 import io
@@ -646,35 +647,29 @@ def main():
             overall_progress.progress(int((i+1)/total*100))
         status_placeholder.empty()
         overall_progress.empty()
-            # ---------------- Processing Results Summary ----------------
-    # Show a compact summary card after processing completes
-    if all_files is not None:
-        total_docs = len(all_files)
-        success_docs = len(results)
-        failed_docs = len(errors)
-        success_rate = (success_docs / total_docs) * 100 if total_docs else 0.0
+        # ------------------------------
+        # 📊 Processing Results Summary
+        # ------------------------------
+        if all_files:
+           total_docs = len(all_files)
+           success_docs = len(results)
+           failed_docs = len(errors)
+           success_rate = (success_docs / total_docs * 100) if total_docs > 0 else 0
 
-        st.markdown("### 📊 Processing Results")
+           st.markdown("### 📊 Processing Results")
+           col1, col2, col3, col4 = st.columns(4)
 
-        # Three metrics in a row
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.metric("📄 Total Documents", total_docs)
-        with col2:
-            st.metric("✅ Successfully Processed", success_docs)
-        with col3:
-            st.metric("❌ Failed", failed_docs)
+           with col1:
+              st.markdown(f"<h4>📈 Total Documents</h4><p style='font-size:22px; font-weight:600; color:#004AAD;'>{total_docs}</p>", unsafe_allow_html=True)
 
-        # Prominent success rate line
-        st.markdown(f"<h4 style='color:#004AAD;'>🎯 Success Rate: {success_rate:.1f}%</h4>", unsafe_allow_html=True)
+           with col2:
+             st.markdown(f"<h4>✅ Successfully Processed</h4><p style='font-size:22px; font-weight:600; color:#2ECC71;'>{success_docs}</p>", unsafe_allow_html=True)
+ 
+           with col3:
+             st.markdown(f"<h4>❌ Failed</h4><p style='font-size:22px; font-weight:600; color:#E74C3C;'>{failed_docs}</p>", unsafe_allow_html=True)
 
-        # Friendly informational message depending on outcomes
-        if total_docs and success_docs == total_docs and failed_docs == 0:
-            st.success(f"✅ Processing complete! {success_docs}/{total_docs} documents processed successfully.")
-        elif failed_docs > 0:
-            st.warning(f"⚠️ Processing finished with errors: {failed_docs} failed out of {total_docs}. See 'Errors / Failed files' below.")
-        else:
-            st.info(f"Processing finished: {success_docs}/{total_docs} processed.")
+           with col4:
+             st.markdown(f"<h4>🎯 Success Rate</h4><p style='font-size:22px; font-weight:600; color:#1F618D;'>{success_rate:.1f}%</p>", unsafe_allow_html=True)
 
 
     # show errors
@@ -882,38 +877,20 @@ def main():
                         st.download_button("Download PDF report", f, file_name=os.path.basename(pdf_path))
                 except Exception as e:
                     st.error(f"PDF export failed: {e}")
-            with tabs[6]:
-              st.markdown("<h2 style='text-align:center; color:#004AAD;'>🎓 Personalized Learning Path</h2>", unsafe_allow_html=True)
-              st.markdown("""
-              This section provides a custom learning plan based on your missing skills from the analysis.
-              Each skill is tagged with priority, difficulty level, and an estimated duration along with useful resources to improve quickly.
-            """)
-
+        with tabs[6]:
+            st.subheader("Personalized Learning Path")
             lpg = LearningPathGenerator()
             plan = lpg.generate(analysis["missing"], analysis["resume_unique"])
-
-    if plan:
-        for i, p in enumerate(plan, 1):
-            st.markdown(f"""
-            <div style='background:linear-gradient(135deg,#e3f6ff,#ccecff);
-                        padding:15px; border-radius:12px; margin-bottom:12px;
-                        box-shadow:0px 3px 6px rgba(0,0,0,0.1);'>
-                <h4 style='color:#004AAD;'>{i}. {p['skill']}</h4>
-                <p><b>Priority:</b> {p['priority']} | <b>Level:</b> {p.get('level', 'Varies')} | 
-                <b>Estimated Duration:</b> {p['time_estimate']}</p>
-                <p><b>Recommended Resources:</b></p>
-                <ul>
-                    {''.join([f"<li>{r}</li>" for r in p['resources']])}
-                </ul>
-            </div>
-            """, unsafe_allow_html=True)
-
-             # ✅ Message appears ONLY once under this tab
-            st.success("✅ Focus on **High Priority Beginner** skills first to strengthen your job readiness efficiently!")
-        else:
+            if plan:
+                for i,p in enumerate(plan,1):
+                    st.markdown(f"**{i}. {p['skill']}** — Priority: {p['priority']} — Est: {p['time_estimate']}")
+                    for rsrc in p["resources"]:
+                        st.write(f"- {rsrc}")
+            else:
                 st.success("No missing skills — great match!")
+
     else:
         st.info("Upload resume(s) and job description(s) then click 'Extract Skills & Run Analysis' to start.")
 
 if __name__ == "__main__":
-    main() 
+    main()
