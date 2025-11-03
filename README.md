@@ -1,166 +1,67 @@
-🌟 AI Powered Skill Gap Analyzer 🌟
+🌟** **AI Powered Skill Gap Analyzer**** 🌟
 
-Author: Keerthi Muppulakunta | Student ID: 17
+👩‍💻 Developed by: Muppulakunta Keerthi| ID: 17
 
-An AI-driven tool to analyze resumes and job descriptions, extract skills, compare skill gaps, and generate personalized learning paths. Perfect for job seekers, recruiters, and HR professionals who want to optimize talent matching.
+📘 **Project Overview**
 
-🚀 Features
+The AI Powered Skill Gap Analyzer is an intelligent web application designed to automatically analyze and compare resumes and job descriptions using Natural Language Processing (NLP) and Machine Learning techniques.
+It helps job seekers, recruiters, and HR professionals identify the matching skills, partial overlaps, and missing competencies between a candidate’s resume and a target job role.
+By leveraging AI-based embeddings, it computes semantic similarity between skills, generates insightful visualizations, and provides a personalized learning path with estimated durations and recommended resources — empowering users to bridge their skill gaps effectively.
 
-Multi-format document support: PDF, DOCX, TXT (with OCR for scanned PDFs using pytesseract & pdf2image)
+⚡ **Key Features**
 
-Skill extraction: NLP-based extraction using SpaCy, keyword matching, and fuzzy logic
+✅ **Smart Document Processing**
+• Uploads multiple resumes and job descriptions in PDF, DOCX, or TXT format.
+• Automatically extracts clean text and removes unnecessary formatting or headers.
+• Supports OCR for scanned documents.
 
-Embeddings & similarity: Calculates skill similarity using Sentence-BERT embeddings
+✅** **AI-based Skill Extraction****
+• Uses spaCy and Sentence-BERT models to identify technical and soft skills.
+• Performs keyword and fuzzy matching for accurate skill detection.
 
-Interactive visualizations with Plotly:
+✅ **Skill Gap Analysis**
+• Compares extracted skills to identify Matched, Partially Matched, and Missing Skills.
+• Generates a similarity score to indicate overall alignment between resume and JD.
 
-Pie charts for overall skill match
+✅ **Interactive Visualizations**
 
-Bubble & radar charts for skill distribution and category coverage
+📊 Processing Summary Dashboard: Total Documents, Success Rate, and Failures.
+📈 Skill Gap Pie Chart: Matched vs Missing skills ratio.
+🎯 Category Radar Chart: Visual representation of coverage by domain.
+🔥 Similarity Heatmap: AI-based similarity scores between all skills.
 
-Heatmaps and bar charts for missing and partial skills
+✅****Personalized Learning Path****
+• Recommends missing skills with priority, difficulty level, and estimated learning time.
+• Provides curated learning resources (Coursera, YouTube, Microsoft Learn, etc.).
 
-Gap analysis: Categorizes skills into Matched, Partial, and Missing
+✅ **Comprehensive Report Generation**
+• Export skill gap results in TXT, CSV, JSON, or PDF formats.
+• Ideal for submitting to mentors, recruiters, or for personal improvement tracking.
 
-Reports: Export analysis as TXT, CSV, JSON, or PDF
+🧠 **Technologies Used**
+- 🖥️ **Frontend & UI:** Streamlit (Python-based Web UI for interactive dashboards)
+- 🧩 **NLP & ML:** spaCy, Sentence Transformers *(BERT)*, Scikit-learn
+- 📊 **Data Processing:** Pandas, NumPy
+- 📄 **Text Extraction:** PyPDF2, python-docx, pytesseract *(OCR)*, pdf2image
+- 🔍 **Fuzzy Matching:** fuzzywuzzy *(for approximate text matching)*
+- 📈 **Visualization:** Plotly *(Pie, Radar, Heatmap, and Bar Charts)*
+- 🧾 **Reports & Export:** ReportLab *(PDF)*, Pandas *(CSV, JSON)*
 
-Personalized learning path: Recommends courses/resources based on missing skills
+🎬 **Outputs**
 
-Customizable thresholds: Adjust strong/partial match levels and confidence filters
+Below are sample output visuals :
+📤** **Document Upload Interface**** – Upload resumes and job descriptions side by side.
+📊 **Processing Results Dashboard** – Displays total, success, and failure counts.
+🧾 ****Skill Extraction Buttons** **– Clean, button-style view of extracted skills.
+🎯 **Gap Analysis** – Clear distinction of matched, partial, and missing skills.
+📈 **Radar & Heatmap Visuals** – Compare category-wise and skill-level similarity.
+🎓 **Personalized Learning Path** – Smart recommendations with duration & resources.
 
-The app provides an interactive dashboard for uploading resumes & job descriptions, extracting skills, and visualizing gaps.
+🏁 **Conclusion**
 
-📂 Supported File Types
-Type	Description
-PDF	Standard PDFs or scanned PDFs (OCR enabled)
-DOCX	Microsoft Word documents
-TXT	Plain text files
-🔧 Technology Stack
+The AI Powered Skill Gap Analyzer provides a data-driven and user-friendly way to measure how well a candidate’s skills align with a job description.
 
-Python 3.10+
+By combining AI embeddings, NLP techniques, and interactive visualization, this tool not only identifies gaps but also guides users on how to close them through personalized learning paths.
 
-Streamlit: Interactive UI
+This project demonstrates how Artificial Intelligence can revolutionize recruitment and career development — helping both candidates and organizations make smarter, skill-based decisions.
 
-SpaCy: NLP & skill extraction
-
-Sentence-Transformers: Embeddings & similarity
-
-PyPDF2 / docx / pytesseract: File parsing & OCR
-
-Plotly: Interactive visualizations
-
-FuzzyWuzzy: Fuzzy skill matching
-
-Pandas / Numpy: Data processing
-
-ReportLab: PDF report generation
-
-📝 Workflow
-
-Upload documents
-
-Upload resumes and job descriptions side by side
-
-Preview & normalize text
-
-Clean, redact sensitive info, and preview extracted text
-
-Assign roles
-
-Tag which documents are resumes or job descriptions
-
-Skill extraction & analysis
-
-Extract skills using NLP and match JD vs Resume skills
-
-Gap analysis & visualizations
-
-Explore matched, partial, and missing skills
-
-Generate interactive plots (pie, radar, heatmap, bar charts)
-
-Generate reports
-
-Export detailed analysis in TXT, CSV, JSON, or PDF
-
-Personalized learning path
-
-Recommended courses/resources to fill skill gaps
-
-📊 Example Visualizations
-
-Overall Skill Match: Pie chart showing matched, partial, and missing skills
-
-Missing Skills Bar Chart: Highlights top skills to improve
-
-Radar Chart: Category-wise skill coverage
-
-Similarity Heatmap: Shows correspondence between resume and JD skills
-
-⚙️ Configuration
-
-Adjust Sentence-BERT model
-
-Customize Strong / Partial match thresholds
-
-Apply confidence filters to skill extraction
-
-Clear session for fresh analysis
-
-🌟 Highlights
-
-Handles large files (up to 100MB)
-
-OCR fallback for scanned PDFs
-
-Flexible learning path recommendations
-
-Easy to extend skill database with new categories
-
-Interactive and intuitive UI for quick insights
-
-🛠️ Future Enhancements
-
-Add support for LinkedIn profile scraping
-
-Include resume scoring & ranking for multiple candidates
-
-Integration with job portals for automated JD fetching
-
-Advanced AI-powered skill recommendations
-
-📄 References / Dependencies
-
-Streamlit
-
-SpaCy
-
-Sentence-Transformers
-
-PyPDF2
-
-python-docx
-
-pytesseract
-
-FuzzyWuzzy
-
-Plotly
-
-ReportLab
-
-Conclusion
-
-The AI Powered Skill Gap Analyzer provides a comprehensive, automated approach to identify and visualize skill gaps between resumes and job descriptions. By combining NLP, embeddings, fuzzy matching, and interactive visualizations, it enables job seekers, recruiters, and HR professionals to:
-
-Quickly extract and categorize skills from multiple document formats (PDF, DOCX, TXT).
-
-Assess skill coverage and gaps with an intuitive similarity analysis.
-
-Visualize matches, partial matches, and missing skills using charts, radar plots, and heatmaps.
-
-Generate actionable learning paths tailored to missing or underrepresented skills.
-
-Export detailed reports in TXT, CSV, JSON, and PDF formats for further analysis.
-
-This tool empowers users to make data-driven decisions for career development, recruitment, and training, bridging the gap between candidate capabilities and job requirements efficiently.
