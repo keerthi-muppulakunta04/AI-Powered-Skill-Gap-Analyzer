@@ -1,0 +1,30 @@
+About the job
+junior data analyst 
+
+Work alongside business teams by assisting them in providing data and analysis.
+Work in a great culture that continuously empowers you to grow in your career.
+Enjoy the freedom to experiment & learn from mistakes. (Fail Fast, Learn Faster)
+Become a key stakeholder in the transformation journeys of thousands of users.
+
+
+Roles and Responsibilities
+
+Assist stakeholders by fulfilling their data and reporting requirements
+Prepare spreadsheets and summaries for quick decision-making
+Build simple dashboards and charts to help track performance
+Ensure data consistency, accuracy, and follow quality control practices
+Coordinate regularly with senior data analysts to align on tasks.
+Process confidential data responsibly and in accordance with established according to guidelines.
+Learn and adapt quickly to emerging analytics tools and techniques.
+Contribute to identifying better ways to collect or structure data.
+Maintain alignment with the company's vision and mission.
+
+
+Skills Required:
+Proficient in Google Sheets/Excel for quick data analysis and summaries.
+Working knowledge of Looker Studio or other BI tools.
+Strong focus on attention to detail and logical thinking.
+Foundational knowledge of SQL (BigQuery) is preferred.
+Willingness to learn tools like DBT, Python, or basic stats.
+Comfortable working in a fast-paced and evolving environment.
+Effective communicator with the ability to summarize findings.
