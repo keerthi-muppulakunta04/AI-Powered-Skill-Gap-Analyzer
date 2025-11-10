@@ -1,6 +1,8 @@
+Milestone 1 - Data Ingestion and Parsing - Streamlit app
+Student Name: Muppulakunta Keerthi
+Student ID: 17
 
-# document_processor.py
-# Milestone 1: Data Ingestion and Parsing - Streamlit app
+
 import streamlit as st
 import PyPDF2
 import docx
